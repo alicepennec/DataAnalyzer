@@ -1,12 +1,12 @@
-FROM node
+FROM node:latest
 
-WORKDIR /dataanalyzer
+WORKDIR /app
 
-COPY package*.json /dataanalyzer/
+COPY package*.json /app/
 
 RUN npm install
 
-COPY . /dataanalyzer/
+COPY . /app
 
 EXPOSE 3000
 
